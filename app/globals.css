@@ -1,0 +1,130 @@
+:root{--bg:#0c0c0c;--fg:#d7e2ea;--muted:#9aa6af;--line:rgba(215,226,234,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--fg);font-family:'Kanit',sans-serif;overflow-x:clip}a{text-decoration:none;color:inherit}button{font:inherit}
+.hero-heading{background:linear-gradient(180deg,#646973 0%,#bbccd7 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.lifeos-shell{min-height:100vh;background:#0c0c0c;overflow-x:clip}.hero{height:100vh;min-height:680px;position:relative;display:flex;flex-direction:column;overflow:hidden}.nav{display:flex;justify-content:space-between;gap:22px;padding:24px 24px 0;position:relative;z-index:30;font-size:14px;text-transform:uppercase;letter-spacing:.16em}.nav a{transition:opacity .2s}.nav a:hover{opacity:.65}.brand{font-weight:800;letter-spacing:.06em}.hero-title-wrap{overflow:hidden;margin-top:12px;position:relative;z-index:4}.hero-title{font-size:clamp(72px,15vw,270px);line-height:.86;font-weight:900;letter-spacing:-.055em;text-align:center;white-space:nowrap;margin:0}.hero-sub{position:absolute;left:24px;bottom:32px;z-index:25;max-width:270px;text-transform:uppercase;letter-spacing:.09em;line-height:1.15;font-weight:300;font-size:clamp(12px,1.35vw,20px)}.hero-cta{position:absolute;right:24px;bottom:32px;z-index:30}
+.pill{border:2px solid var(--fg);border-radius:999px;padding:12px 22px;text-transform:uppercase;letter-spacing:.14em;font-size:13px;background:rgba(12,12,12,.4);backdrop-filter:blur(8px);transition:transform .2s,background .2s}.pill:hover{background:rgba(215,226,234,.12);transform:translate3d(0,-3px,0)}
+.hero-portrait-wrap{position:absolute;left:50%;top:51%;transform:translate(-50%,-50%);z-index:10;width:clamp(420px,55vh,720px);height:clamp(420px,70vh,760px);touch-action:pan-y}.hero-portrait-inner{position:relative;width:100%;height:100%;transition:transform .6s ease-in-out;will-change:transform}.hero-portrait-inner img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;-webkit-user-drag:none}.hero-portrait-inner canvas{position:absolute;left:-35%;top:-35%;width:170%;height:170%;pointer-events:none}#faceFallback{z-index:1;opacity:1;visibility:visible}.hero-portrait-inner canvas{z-index:2}.hero-portrait-inner #faceProps{position:absolute;inset:0;pointer-events:none}#faceFly,#faceHand{position:absolute;opacity:0;transition:opacity .2s;transform:translate(-50%,-50%)}#faceFly{width:6%;fill:#111}#faceFly .wing{fill:rgba(220,235,255,.7);transform-origin:16px 15px;animation:flap .05s linear infinite alternate}#faceFly .wing.r{animation-direction:alternate-reverse}@keyframes flap{from{transform:rotate(-16deg)}to{transform:rotate(16deg)}}#faceHand{width:11%;fill:#fff;stroke:#0c0c0c;stroke-width:1.4;stroke-linejoin:round}#faceHand .grab{display:none}#faceHand.shut .open{display:none}#faceHand.shut .grab{display:block}
+.cursor-dot,.cursor-ring{position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transform:translate(-50%,-50%)}.cursor-dot{width:7px;height:7px;border-radius:50%;background:#fff}.cursor-ring{width:34px;height:34px;border:1px solid #fff;border-radius:50%;transition:width .18s,height .18s,opacity .18s}.cursor-ring.big{width:58px;height:58px;opacity:.7}
+.marquee{padding:120px 0 40px;overflow:hidden}.marquee-row{display:flex;gap:12px;width:max-content;will-change:transform;margin-bottom:12px}.tile{width:420px;height:270px;object-fit:cover;border-radius:16px;display:block;background:#151515}.section{min-height:100vh;padding:100px 24px;position:relative;display:flex;align-items:center;justify-content:center}.about-inner{text-align:center;max-width:700px}.section-title{font-size:clamp(54px,12vw,160px);font-weight:900;line-height:.9;margin:0 0 42px}.about-copy{font-size:clamp(16px,2vw,22px);line-height:1.6;color:#d7e2ea;font-weight:500}.about-copy span{opacity:.2;transition:opacity .15s}.decor{position:absolute;pointer-events:none;opacity:.9}.decor.one{top:4%;left:3%;width:180px}.decor.two{bottom:8%;left:8%;width:160px}.decor.three{top:4%;right:3%;width:180px}.decor.four{bottom:8%;right:8%;width:190px}.services{background:#0c0c0c}.service-grid{width:min(1100px,100%);display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.service{border:1px solid var(--line);border-radius:28px;padding:32px;min-height:220px;background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:transform .25s,border-color .25s}.service:hover{transform:translateY(-8px);border-color:rgba(215,226,234,.55)}.service h3{font-size:28px;margin:0 0 14px}.service p{color:var(--muted);line-height:1.5}.projects{padding-top:80px}.projects-inner{width:min(1100px,100%)}.project-card{min-height:420px;border:2px solid #d7e2ea;border-radius:40px;padding:34px;margin-bottom:28px;position:sticky;top:80px;background:#0c0c0c;display:flex;flex-direction:column;justify-content:space-between}.project-card h3{font-size:clamp(40px,7vw,84px);margin:0}.project-card p{max-width:620px;color:var(--muted);font-size:18px}.footer{padding:50px 24px 80px;text-align:center;color:#7f8b94;text-transform:uppercase;letter-spacing:.14em}
+.workspace{min-height:100vh;background:radial-gradient(circle at 20% 10%,#172a50 0,transparent 32%),radial-gradient(circle at 85% 15%,#321b54 0,transparent 35%),#080b18;color:#fff;padding:28px}.workspace-top{display:flex;justify-content:space-between;align-items:center;gap:20px;max-width:1200px;margin:0 auto 60px}.workspace-brand{font-size:26px;font-weight:900}.mode-tabs{display:flex;gap:10px}.mode-tab{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:#fff;padding:11px 18px;border-radius:14px;cursor:pointer}.mode-tab.active{border-color:#32d8ff;background:rgba(50,216,255,.14)}.workspace-main{max-width:1200px;margin:auto}.workspace-hero{font-size:clamp(48px,7vw,100px);line-height:.9;margin:0 0 18px}.workspace-copy{color:#aab5c5;max-width:700px;font-size:18px}.workspace-card{margin-top:35px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);backdrop-filter:blur(18px);border-radius:28px;padding:24px}.workspace-input{width:100%;min-height:160px;background:#070a13;border:1px solid rgba(255,255,255,.12);border-radius:18px;color:#fff;padding:18px;resize:vertical;font:inherit}.workspace-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}.workspace-result{white-space:pre-wrap;line-height:1.65;color:#dce5ef;margin-top:22px}.camera-box{margin-top:20px;border-radius:22px;overflow:hidden;background:#000;position:relative}.camera-box video{width:100%;max-height:500px;object-fit:cover;display:block}.small{color:#7f8b94;font-size:13px}
+@media(max-width:760px){.nav{padding:18px 14px 0;font-size:11px}.hero-title{font-size:18vw}.hero-sub{left:14px;bottom:18px;max-width:160px}.hero-cta{right:14px;bottom:18px}.pill{padding:9px 14px;font-size:10px}.hero-portrait-wrap{width:clamp(330px,80vw,520px);height:clamp(330px,70vh,560px)}.marquee{padding-top:80px}.tile{width:260px;height:170px}.section{padding:80px 16px}.decor{opacity:.45}.service-grid{grid-template-columns:1fr}.project-card{top:20px;border-radius:28px}.cursor-dot,.cursor-ring{display:none}.workspace{padding:16px}.workspace-top{align-items:flex-start;flex-direction:column}}
+.workspace-actions .mode-tab:disabled{opacity:.45;cursor:not-allowed}.camera-controls{display:flex;gap:10px;position:absolute;left:12px;right:12px;bottom:12px;justify-content:center;flex-wrap:wrap}.workspace-files{display:flex;flex-direction:column;gap:8px;margin-top:14px}.workspace-file{display:flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:12px;color:#dce5ef}.workspace-file img{width:42px;height:42px;object-fit:cover;border-radius:8px}.workspace-file-icon{font-size:24px}.workspace-file span:nth-child(2){overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.workspace-file button{border:0;background:transparent;color:#fff;font-size:20px;cursor:pointer}.workspace-error{margin-top:14px;color:#ffb4b4}.camera-box{min-height:240px}.camera-box video{min-height:240px}
+
+
+/* Personal About section */
+.about-profile-section { background:#0c0c0c; }
+.about-profile { width:min(980px,100%); }
+.profile-details { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; margin-top:44px; }
+.profile-detail { display:flex; flex-direction:column; gap:8px; padding:22px 24px; border:1px solid rgba(215,226,234,.18); border-radius:20px; background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018)); min-width:0; }
+.profile-detail-label { color:#8996a1; font-size:10px; letter-spacing:.2em; font-weight:600; }
+.profile-detail strong,.profile-detail a { color:#d7e2ea; font-size:clamp(18px,2.3vw,27px); line-height:1.25; font-weight:500; overflow-wrap:anywhere; }
+.profile-detail a { text-decoration:underline; text-decoration-color:rgba(215,226,234,.35); text-underline-offset:5px; }
+.profile-college { grid-column:1/-1; }
+.profile-college span:last-child { color:#9aa6af; font-size:16px; }
+@media(max-width:600px){.profile-details{grid-template-columns:1fr;gap:10px;margin-top:28px}.profile-college{grid-column:auto}.profile-detail{padding:18px}}
+/* Cleaner LIFEOS workspace controls; functionality remains in workspace/page.tsx */
+.workspace { padding:clamp(18px,4vw,42px); }
+.workspace-top { padding-bottom:22px; border-bottom:1px solid rgba(255,255,255,.12); margin-bottom:clamp(38px,6vw,70px); }
+.workspace-brand { letter-spacing:.04em; }
+.mode-tabs,.workspace-actions,.camera-controls { gap:10px; }
+.mode-tab { border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.055); color:#eaf1fb; padding:11px 17px; border-radius:12px; transition:background .2s,border-color .2s,transform .2s; }
+.mode-tab:hover:not(:disabled) { background:rgba(65,190,255,.12); border-color:rgba(65,190,255,.5); transform:translateY(-1px); }
+.mode-tab.active { background:linear-gradient(110deg,rgba(50,216,255,.18),rgba(139,92,246,.18)); border-color:rgba(92,202,255,.55); }
+.workspace-card { border:1px solid rgba(255,255,255,.13); background:rgba(12,19,35,.78); box-shadow:0 24px 80px rgba(0,0,0,.24); padding:clamp(16px,3vw,30px); }
+.workspace-input { min-height:180px; line-height:1.55; outline:none; }
+.workspace-input:focus { border-color:rgba(50,216,255,.55); box-shadow:0 0 0 3px rgba(50,216,255,.08); }
+.workspace-result { padding:20px; border:1px solid rgba(50,216,255,.2); background:rgba(50,216,255,.055); border-radius:16px; }
+.workspace-copy { line-height:1.65; }
+.camera-box { border:1px solid rgba(255,255,255,.14); }
+
+
+/* =========================================================
+   LIFEOS SECOND INTERFACE — APPLE-INSPIRED GLASS WORKSPACE
+   Visual-only styling. Existing camera, upload and AI logic retained.
+========================================================= */
+.glass-workspace {
+  --glass-text:#f2f4f8;
+  --glass-muted:#9ca8b8;
+  --glass-line:rgba(255,255,255,.11);
+  --glass-blue:#a9d8ff;
+  position:relative;
+  isolation:isolate;
+  min-height:100vh;
+  padding:clamp(22px,5vw,64px);
+  overflow:hidden;
+  color:var(--glass-text);
+  background:
+    radial-gradient(ellipse at 16% 4%,rgba(120,155,210,.17),transparent 34%),
+    radial-gradient(ellipse at 88% 22%,rgba(149,128,190,.13),transparent 32%),
+    linear-gradient(145deg,#090c13 0%,#101522 48%,#090c13 100%);
+}
+.glass-workspace:before,.glass-workspace:after {
+  content:"";position:absolute;z-index:-1;border-radius:50%;filter:blur(1px);pointer-events:none;
+}
+.glass-workspace:before {width:440px;height:440px;top:18%;right:-180px;border:1px solid rgba(210,226,255,.08);box-shadow:0 0 100px rgba(129,165,220,.07) inset}
+.glass-workspace:after {width:300px;height:300px;bottom:-150px;left:-100px;background:rgba(130,160,210,.06);filter:blur(70px)}
+.glass-topbar {max-width:1240px;margin:0 auto 70px;padding:0 0 24px;border-bottom:1px solid var(--glass-line);display:flex;align-items:center;justify-content:space-between}
+.workspace-heading {display:flex;flex-direction:column;gap:5px}
+.workspace-back {font-size:10px;letter-spacing:.16em;color:#9daabe;margin-bottom:13px;transition:color .2s}
+.workspace-back:hover {color:white}
+.glass-workspace .workspace-brand {font-size:25px;letter-spacing:.12em;font-weight:700}
+.workspace-brand-mark {color:#b7d8ff;margin-left:4px}
+.glass-workspace .small {color:#8793a5;font-size:13px}
+.workspace-status {display:flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);backdrop-filter:blur(20px);padding:10px 14px;border-radius:999px;color:#b8c5d7;font-size:9px;letter-spacing:.16em}
+.workspace-status span {width:6px;height:6px;border-radius:50%;background:#9de2c0;box-shadow:0 0 12px #9de2c0}
+.workspace-welcome {max-width:1240px;margin:0 auto 38px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+.workspace-kicker,.workspace-card-kicker {font-size:10px;letter-spacing:.2em;color:#91a4bd;margin:0 0 16px}
+.glass-workspace .workspace-hero {font-size:clamp(38px,5.8vw,76px);font-weight:500;letter-spacing:-.055em;line-height:1.02;max-width:760px;margin:0 0 14px;color:#f3f6fb}
+.glass-workspace .workspace-copy {max-width:660px;color:#aab5c5;font-size:15px;line-height:1.7;margin:0}
+.workspace-mode-switch {display:flex;gap:8px;padding:5px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);border-radius:16px;backdrop-filter:blur(22px);flex-shrink:0}
+.glass-workspace .mode-tab {border:1px solid transparent;background:transparent;color:#aeb9c9;padding:12px 16px;border-radius:11px;font-size:11px;letter-spacing:.04em;transition:all .22s ease;cursor:pointer}
+.glass-workspace .mode-tab:hover:not(:disabled) {background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.08);transform:translateY(-1px)}
+.glass-workspace .mode-tab.active {background:linear-gradient(135deg,rgba(219,232,255,.2),rgba(160,188,230,.09));border-color:rgba(218,231,255,.2);color:#f5f8ff;box-shadow:0 5px 22px rgba(0,0,0,.12),inset 0 1px rgba(255,255,255,.12)}
+.workspace-mode-switch .mode-tab span {margin-right:7px;color:#c5ddff}
+.workspace-main {max-width:1240px;margin:0 auto}
+.glass-card {margin:0;border:1px solid rgba(255,255,255,.13);border-radius:26px;padding:clamp(20px,3vw,36px);background:linear-gradient(145deg,rgba(255,255,255,.095),rgba(255,255,255,.035));backdrop-filter:blur(30px) saturate(135%);-webkit-backdrop-filter:blur(30px) saturate(135%);box-shadow:0 30px 100px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.12)}
+.workspace-card-heading {display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.workspace-card-heading h2 {margin:0;color:#eef3fb;font-size:clamp(20px,2.5vw,28px);font-weight:500;letter-spacing:-.025em}
+.workspace-card-kicker {display:block;margin-bottom:8px;font-size:9px}
+.workspace-orb {width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#d8e8ff;font-size:20px;background:radial-gradient(circle at 35% 30%,rgba(235,245,255,.32),rgba(160,188,230,.08) 65%);border:1px solid rgba(220,235,255,.18);box-shadow:0 0 35px rgba(161,193,236,.1)}
+.glass-workspace .workspace-input {min-height:190px;padding:20px 22px;border-radius:17px;border:1px solid rgba(255,255,255,.12);background:rgba(6,10,18,.48);color:#f1f5fb;font-size:15px;line-height:1.7;resize:vertical}
+.glass-workspace .workspace-input::placeholder {color:#758297}
+.glass-workspace .workspace-input:focus {border-color:rgba(191,216,255,.42);box-shadow:0 0 0 4px rgba(169,203,255,.07)}
+.glass-workspace .workspace-actions {display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:17px}
+.glass-workspace .ask-button {background:linear-gradient(135deg,#e4edfa,#b9cce8);color:#111a29;border-color:rgba(255,255,255,.7);font-weight:600;padding:13px 20px}
+.glass-workspace .ask-button:hover:not(:disabled) {background:#fff;color:#101827}
+.glass-workspace .ask-button span {margin-left:10px}
+.glass-workspace .tool-button {background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.12);color:#dce5f2;padding:13px 16px}
+.glass-workspace .tool-button span {margin-right:7px;color:#c5ddff}
+.glass-workspace .clear-button {margin-left:auto;color:#929fb2}
+.glass-workspace .mode-tab:disabled {opacity:.38;cursor:not-allowed}
+.glass-workspace .workspace-files {gap:9px;margin-top:18px}
+.glass-workspace .workspace-file {border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.045);padding:11px 13px;border-radius:14px}
+.glass-workspace .camera-panel {margin-top:24px;padding:14px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(5,9,16,.38)}
+.camera-panel-heading {display:flex;justify-content:space-between;align-items:center;padding:4px 4px 12px;color:#a9b9cf;font-size:9px;letter-spacing:.17em}
+.camera-close {border:0;background:transparent;color:#b7c3d3;font:inherit;font-size:9px;letter-spacing:.12em;cursor:pointer}
+.glass-workspace .camera-box {margin:0;border:1px solid rgba(255,255,255,.12);border-radius:15px;min-height:260px;background:#060a12}
+.glass-workspace .camera-box video {max-height:560px;min-height:260px;object-fit:contain;background:#060a12}
+.glass-workspace .camera-controls {position:static;padding:14px 0 0;justify-content:flex-start}
+.glass-workspace .workspace-result {margin-top:22px;padding:22px;border-radius:17px;border:1px solid rgba(192,218,255,.17);background:rgba(171,202,245,.07);color:#e4edf9;white-space:pre-wrap;line-height:1.75}
+.workspace-response-label {font-size:9px;letter-spacing:.18em;color:#a9c8ef;margin-bottom:12px}
+.glass-workspace .workspace-error {padding:12px 14px;border-radius:12px;background:rgba(255,110,110,.08);border:1px solid rgba(255,140,140,.18)}
+@media(max-width:800px) {
+ .glass-topbar {margin-bottom:48px}
+ .workspace-welcome {align-items:flex-start;flex-direction:column}
+ .workspace-mode-switch {width:100%}
+ .workspace-mode-switch .mode-tab {flex:1}
+}
+@media(max-width:560px) {
+ .glass-workspace {padding:22px 15px 40px}
+ .workspace-status {font-size:8px;padding:8px 10px}
+ .glass-workspace .workspace-brand {font-size:22px}
+ .glass-workspace .workspace-hero {font-size:42px}
+ .glass-workspace .workspace-copy {font-size:14px}
+ .glass-card {padding:18px;border-radius:21px}
+ .glass-workspace .workspace-actions {display:grid;grid-template-columns:1fr 1fr}
+ .glass-workspace .workspace-actions button {width:100%;margin:0}
+ .glass-workspace .ask-button {grid-column:1/-1}
+ .glass-workspace .clear-button {grid-column:1/-1}
+ .glass-workspace .camera-controls {display:flex;flex-wrap:wrap}
+}
